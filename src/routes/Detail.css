@@ -36,6 +36,13 @@
     0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
 
+.movie .movie__data {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
 .movie .movie__title,
 .movie .movie__year {
   margin: 0;
@@ -53,6 +60,7 @@
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   margin: 5px 0px;
 }
 
@@ -60,4 +68,19 @@
 .movie .movie__year {
   margin-right: 10px;
   font-size: 14px;
+}
+
+@media screen and (max-width: 1400px) {
+  .movie img {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .movie img {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .movie .movie__data {
+    width: 90%;
+  }
 }

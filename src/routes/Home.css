@@ -19,11 +19,31 @@ body, */
 }
 
 .movies {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
   padding: 50px;
   padding-top: 70px;
   width: 80%;
+}
+
+@media screen and (max-width: 1400px) {
+  .movies {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .movies {
+    width: 90%;
+  }
+  .movies .movie {
+    width: 90%;
+  }
+  .movies .movie a {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
