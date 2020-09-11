@@ -1,3 +1,4 @@
 # Movie App
 
-React JS Fundamentals Course following
+- Movie app using React.js
+- axios to fetch data from API

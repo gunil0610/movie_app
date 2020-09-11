@@ -76,6 +76,10 @@
   }
 }
 @media screen and (max-width: 800px) {
+  .movie {
+    flex-direction: column;
+    align-items: center;
+  }
   .movie img {
     width: 90%;
     margin: 0 auto;
