@@ -1,8 +1,11 @@
-import React from "react";
+import { createLazyFileRoute } from "@tanstack/react-router";
 import "./About.css";
 
-function About(props) {
-  console.log(props);
+export const Route = createLazyFileRoute("/about")({
+  component: About,
+});
+
+function About() {
   return (
     <div className="about__container">
       <span>
@@ -13,5 +16,3 @@ function About(props) {
     </div>
   );
 }
-
-export default About;
