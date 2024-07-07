@@ -12,9 +12,11 @@
     "predeploy": "npm run build"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.0-alpha.17",
     "axios": "^1.7.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^4.0.0-alpha.17"
   },
   "devDependencies": {
     "@tanstack/router-devtools": "^1.43.12",

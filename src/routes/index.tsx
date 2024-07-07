@@ -30,13 +30,13 @@ function Index() {
   }, []);
 
   return (
-    <section className="container">
+    <section className="h-full flex justify-center">
       {isLoading ? (
-        <div className="loader">
+        <div className="w-full h-screen flex items-center justify-center font-light">
           <span className="loader__text">Loading...</span>
         </div>
       ) : (
-        <div className="movies">
+        <div className="grid gap-2.5 p-12 pt-16 w-[80%] grid-cols-1 2xl:grid-cols-2">
           {movies.map((movie) => (
             <Movie
               key={movie.id}
