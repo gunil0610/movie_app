@@ -1,1 +1,0 @@
-import{c as t,j as e}from"./index-CYPS4fVt.js";const a=t("/about")({component:o});function o(){return e.jsxs("div",{className:"about__container",children:[e.jsx("span",{children:"“Freedom is the freedom to say that two plus two make four. If that is granted, all else follows.”"}),e.jsx("span",{children:"− George Orwell, 1984"})]})}export{a as Route};
