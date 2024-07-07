@@ -7,19 +7,10 @@ export type MovieProps = {
   title: string;
   summary: string;
   poster: string;
-  posterL: string;
   genres: string[];
 };
 
-function Movie({
-  id,
-  year,
-  title,
-  summary,
-  poster,
-  posterL,
-  genres,
-}: MovieProps) {
+function Movie({ id, year, title, summary, poster, genres }: MovieProps) {
   return (
     <div className="movie">
       <Link to={`/movie/${id}`}>
