@@ -3,10 +3,10 @@ import axios from "axios";
 import Movie from "../components/Movie";
 import "./Home.css";
 
-import { createLazyFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { MovieList } from "../types/movie";
 
-export const Route = createLazyFileRoute("/")({
+export const Route = createFileRoute("/")({
   component: Index,
 });
 
