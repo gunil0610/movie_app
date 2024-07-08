@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import Movie from "../components/Movie";
-import "./Home.css";
 
-import { createFileRoute } from "@tanstack/react-router";
+import { createLazyFileRoute } from "@tanstack/react-router";
 import { MovieList } from "../types/movie";
 
-export const Route = createFileRoute("/")({
+export const Route = createLazyFileRoute("/")({
   component: Index,
 });
 

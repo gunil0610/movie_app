@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import "./Movie.css";
 
 export type MovieProps = {
   id: number;
@@ -20,19 +19,21 @@ function Movie({ id, year, title, summary, poster, genres }: MovieProps) {
         <img
           src={poster}
           alt={title}
-          className="relative top-[-50px] max-w-36 mr-8 shadow"
+          className="relative top-[-50px] max-w-[1500px] mr-8 shadow"
         />
-        <div className="movie__data">
-          <h3 className="movie__title">{title}</h3>
-          <h5 className="movie__year">{year}</h5>
-          <ul className="movie__genres">
+        <div className="flex flex-col flex-wrap w-1/2">
+          <h3 className="m-0 font-light mb-1.5 text-2xl text-[#2c2c2c]">
+            {title}
+          </h3>
+          <h5 className="m-0 font-light">{year}</h5>
+          <ul className="list-none p-0 m-0 my-1.5 overflow-auto w-full">
             {genres.map((genre, index) => (
-              <li key={index} className="genres__genre">
+              <li key={index} className="mr-2.5 text-sm">
                 {genre}
               </li>
             ))}
           </ul>
-          <p className="movie__summary">{summary.slice(0, 180)}...</p>
+          <p className="break-words">{summary.slice(0, 180)}...</p>
         </div>
       </Link>
     </div>
