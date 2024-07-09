@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, ErrorComponent } from "@tanstack/react-router";
 import axios from "axios";
 import { MovieDetail } from "../types/movie";
 
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/movie/$movieId")({
 function Detail() {
   const { movie } = Route.useLoaderData();
 
-  if (movie) {
+  if (movie && movie.id !== 0) {
     return (
       <div className="flex min-h-screen w-full items-center justify-center overflow-auto pt-5">
         {/* movie */}
@@ -45,6 +45,10 @@ function Detail() {
       </div>
     );
   } else {
-    return null;
+    return (
+      <div className="grid h-screen w-screen items-center">
+        <ErrorComponent error={new Error("Movie not found")} />;
+      </div>
+    );
   }
 }
