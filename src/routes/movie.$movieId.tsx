@@ -19,20 +19,20 @@ function Detail() {
 
   if (movie) {
     return (
-      <div className="flex items-center justify-center w-full min-h-screen overflow-auto pt-5">
+      <div className="flex min-h-screen w-full items-center justify-center overflow-auto pt-5">
         {/* movie */}
-        <div className="w-3/4 flex flex-col md:flex-row items-center md:items-start md:justify-between gap-2 md:gap-0 bg-white mb-16 font-light p-5 rounded text-[#adaeb9] shadow-lg">
+        <div className="mb-16 flex w-3/4 flex-col items-center gap-2 rounded bg-white p-5 font-light text-[#adaeb9] shadow-lg md:flex-row md:items-start md:justify-between md:gap-0">
           <img
             src={movie.large_cover_image}
             alt={movie.title}
-            className="relative w-[90%] md:w-[45%] max-w-[1500px] m-0 mx-auto md:mr-8 shadow aspect-auto"
+            className="relative m-0 mx-auto aspect-auto w-[90%] max-w-[1500px] shadow md:mr-8 md:w-[45%]"
           />
-          <div className="flex flex-col flexwrap w-[90%] md:w-1/2">
-            <h3 className="m-0 font-medium mb-1.5 text-2xl text-[#2c2c2c]">
+          <div className="flexwrap flex w-[90%] flex-col md:w-1/2">
+            <h3 className="m-0 mb-1.5 text-2xl font-medium text-[#2c2c2c]">
               {movie.title}
             </h3>
             <h5 className="m-0 font-light">{movie.year}</h5>
-            <ul className="list-none p-0 m-0 my-1.5 flex flex-wrap">
+            <ul className="m-0 my-1.5 flex list-none flex-wrap p-0">
               {movie.genres.map((genre, index) => (
                 <li key={index} className="mr-2.5 text-sm">
                   {genre}

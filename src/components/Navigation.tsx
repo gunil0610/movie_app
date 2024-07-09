@@ -2,16 +2,16 @@ import { Link } from "@tanstack/react-router";
 
 function Navigation() {
   return (
-    <div className="fixed top-[50px] left-[10px] flex flex-col px-5 py-2.5 bg-white rounded-md shadow-md gap-5">
+    <div className="fixed top-[50px] left-[10px] flex flex-col gap-5 rounded-md bg-white py-2.5 px-5 shadow-md">
       <Link
         to="/"
-        className="[&.active]:font-bold text-[#0008fc] decoration-0 uppercase text-sm text-center"
+        className="text-center text-sm uppercase text-[#0008fc] decoration-0 [&.active]:font-bold"
       >
         Home
       </Link>
       <Link
         to="/about"
-        className="[&.active]:font-bold text-[#0008fc] decoration-0 uppercase text-sm text-center"
+        className="text-center text-sm uppercase text-[#0008fc] decoration-0 [&.active]:font-bold"
       >
         About
       </Link>

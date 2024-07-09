@@ -11,22 +11,22 @@ export type MovieProps = {
 
 function Movie({ id, year, title, summary, poster, genres }: MovieProps) {
   return (
-    <div className="w-[90%] bg-white mb-16 font-light p-5 rounded text-[#adaeb9] shadow ">
+    <div className="mb-16 w-[90%] rounded bg-white p-5 font-light text-[#adaeb9] shadow">
       <Link
         to={`/movie/${id}`}
-        className="flex flex-col md:flex-row md:w-[90%] items-start justify-between text-inherit decoration-0"
+        className="flex flex-col items-start justify-between text-inherit decoration-0 md:w-[90%] md:flex-row"
       >
         <img
           src={poster}
           alt={title}
-          className="relative top-[-50px] max-w-[1500px] mr-0 md:mr-8 w-full md:w-auto shadow"
+          className="relative top-[-50px] mr-0 w-full max-w-[1500px] shadow md:mr-8 md:w-auto"
         />
-        <div className="flex flex-col flex-wrap w-full md:w-1/2">
-          <h3 className="m-0 font-light mb-1.5 text-2xl text-[#2c2c2c]">
+        <div className="flex w-full flex-col flex-wrap md:w-1/2">
+          <h3 className="m-0 mb-1.5 text-2xl font-light text-[#2c2c2c]">
             {title}
           </h3>
           <h5 className="m-0 font-light">{year}</h5>
-          <ul className="list-none p-0 m-0 my-1.5 overflow-auto w-full">
+          <ul className="m-0 my-1.5 w-full list-none overflow-auto p-0">
             {genres.map((genre, index) => (
               <li key={index} className="mr-2.5 text-sm">
                 {genre}
