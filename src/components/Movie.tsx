@@ -11,17 +11,17 @@ export type MovieProps = {
 
 function Movie({ id, year, title, summary, poster, genres }: MovieProps) {
   return (
-    <div className="w-[90%] bg-white mb-16 font-light p-5 rounded text-[#adaeb9] shadow">
+    <div className="w-[90%] bg-white mb-16 font-light p-5 rounded text-[#adaeb9] shadow ">
       <Link
         to={`/movie/${id}`}
-        className="flex items-start justify-between text-inherit decoration-0"
+        className="flex flex-col md:flex-row md:w-[90%] items-start justify-between text-inherit decoration-0"
       >
         <img
           src={poster}
           alt={title}
-          className="relative top-[-50px] max-w-[1500px] mr-8 shadow"
+          className="relative top-[-50px] max-w-[1500px] mr-0 md:mr-8 w-full md:w-auto shadow"
         />
-        <div className="flex flex-col flex-wrap w-1/2">
+        <div className="flex flex-col flex-wrap w-full md:w-1/2">
           <h3 className="m-0 font-light mb-1.5 text-2xl text-[#2c2c2c]">
             {title}
           </h3>
