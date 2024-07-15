@@ -11,7 +11,7 @@ export type MovieProps = {
 
 function Movie({ id, year, title, summary, poster, genres }: MovieProps) {
   return (
-    <div className="mx-auto mb-16 max-h-[700px] w-full rounded bg-white p-5 font-light text-[#adaeb9] shadow">
+    <div className="mx-auto mb-16 w-full rounded bg-white p-5 font-light text-[#adaeb9] shadow md:max-h-[700px]">
       <Link
         to={`/movie/${id}`}
         className="flex flex-col items-start justify-between text-inherit decoration-0 md:w-[90%] md:flex-row"
@@ -26,14 +26,16 @@ function Movie({ id, year, title, summary, poster, genres }: MovieProps) {
             {title}
           </h3>
           <h5 className="m-0 font-light">{year}</h5>
-          <ul className="mx-0 my-1.5 flex w-full list-none overflow-auto p-0">
+          <ul className="mx-0 my-1.5 flex w-full list-none flex-wrap overflow-auto p-0">
             {genres.map((genre, index) => (
               <li key={index} className="mr-2.5 text-sm">
                 {genre}
               </li>
             ))}
           </ul>
-          <p className="truncate break-words">{summary}</p>
+          <p className="md:webkit-line-clamp-6 block truncate break-words md:overflow-hidden md:text-ellipsis md:whitespace-pre-wrap">
+            {summary}
+          </p>
         </div>
       </Link>
     </div>

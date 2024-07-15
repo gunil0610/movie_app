@@ -11,3 +11,21 @@ body {
   background-color: #eff3f7;
   height: 100%;
 }
+
+@supports (display: -webkit-box) {
+  .webkit-line-clamp-6 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+  }
+
+  .md\:webkit-line-clamp-6 {
+    @media (width >= 48rem /* 768px */) {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 6;
+      line-clamp: 6;
+    }
+  }
+}

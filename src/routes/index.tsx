@@ -84,11 +84,11 @@ function Index() {
             Next Page
           </Link>
         </div>
-        {isFetching ? (
+        {isFetching && (
           <span className="flex w-full items-center justify-center">
             Loading...
           </span>
-        ) : null}
+        )}
       </div>
     </>
   );
